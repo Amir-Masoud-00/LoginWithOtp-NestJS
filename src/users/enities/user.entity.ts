@@ -12,6 +12,10 @@ export class UserEntity{
     family:string;
     @Column({length:11})
     mobile:string;
+
+    @Column({type:'varchar'})
+    password:string;
+    
     @OneToMany(()=>UserLoginStatusEntity , (status)=>status.user)
     loginstatus:UserLoginStatusEntity[];
 

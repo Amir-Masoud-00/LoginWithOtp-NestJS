@@ -12,7 +12,7 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot({
       envFilePath: '.env',
-      isGlobal:true
+      isGlobal: true
     }),
 
     TypeOrmModule.forRoot({
@@ -22,12 +22,12 @@ import { ConfigModule } from '@nestjs/config';
       username: 'root',
       password: '',
       database: 'asaf724',
-      entities: [UserEntity,UserLoginStatusEntity],
-      synchronize: false,
+      entities: [UserEntity, UserLoginStatusEntity],
+      synchronize: true,
     }),
     UsersModule,
     AuthModule],
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
